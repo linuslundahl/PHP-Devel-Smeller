@@ -1,0 +1,10 @@
+{
+  "smelly": {
+    "die": "die",
+    "error_log": "error_log\\(",
+    "kpr": "kpr\\(",
+    "print_r": "print_r\\(",
+    "var_dump": "var_dump\\(",
+    "xdebug_print_function_stack": "xdebug_print_function_stack\\("
+  }
+}
