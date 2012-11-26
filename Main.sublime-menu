@@ -12,17 +12,17 @@
                 "children":
                 [
                     {
-                        "caption": "PHP Syntax Checker",
+                        "caption": "PHP Devel Smeller",
                         "children":
                         [
                             {
                                 "command": "open_file",
-                                "args": {"file": "${packages}/PHP-Syntax-Checker/PhpSyntaxSmeller.sublime-settings"},
+                                "args": {"file": "${packages}/PHP-Devel-Checker/PhpDevelSmeller.sublime-settings"},
                                 "caption": "Settings – Default"
                             },
                             {
                                 "command": "open_file",
-                                "args": {"file": "${packages}/User/PhpSyntaxSmeller.sublime-settings"},
+                                "args": {"file": "${packages}/User/PhpDevelSmeller.sublime-settings"},
                                 "caption": "Settings – User"
                             }
                         ]

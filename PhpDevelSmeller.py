@@ -4,11 +4,11 @@ import os
 import re
 
 
-class PhpSyntaxChecker(sublime_plugin.EventListener):
+class PhpDevelChecker(sublime_plugin.EventListener):
     TARGET_SUFFIXES = [".php", ".module", ".inc"]
 
     def on_post_save(self, view):
-        settings = sublime.load_settings("PhpSyntaxSmeller.sublime-settings").get("smelly")
+        settings = sublime.load_settings("PhpDevelSmeller.sublime-settings").get("smelly")
         path = view.file_name()
         root, extension = os.path.splitext(path)
 
@@ -27,7 +27,7 @@ class PhpSyntaxChecker(sublime_plugin.EventListener):
                 l = l + 1
 
             if len(errors):
-                if (sublime.load_settings("PhpSyntaxSmeller.sublime-settings").get("use_notification_center")):
+                if (sublime.load_settings("PhpDevelSmeller.sublime-settings").get("use_notification_center")):
                     os.system('terminal-notifier -message "' + errors + '"')
                 else:
                     sublime.error_message(errors)
