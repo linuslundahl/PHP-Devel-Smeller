@@ -21,8 +21,7 @@ class PhpSyntaxChecker(sublime_plugin.EventListener):
             errors = ''
             for line in code.split("\n"):
                 for smell in settings:
-                    ex = settings[smell]
-                    ex = re.compile(ex)
+                    ex = re.compile(settings[smell])
                     if ex.search(line) and not ignore.search(line):
                         errors += "%s smells bad at line %i\n" % (smell, l)
                 l = l + 1
