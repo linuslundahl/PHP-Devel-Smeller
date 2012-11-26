@@ -8,7 +8,7 @@ class PhpSyntaxChecker(sublime_plugin.EventListener):
     TARGET_SUFFIXES = [".php", ".module", ".inc"]
 
     def on_post_save(self, view):
-        settings = sublime.load_settings("PhpSyntaxChecker.sublime-settings").get("smelly")
+        settings = sublime.load_settings("PhpSyntaxSmeller.sublime-settings").get("smelly")
         path = view.file_name()
         root, extension = os.path.splitext(path)
 
