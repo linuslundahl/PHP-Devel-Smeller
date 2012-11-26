@@ -1,4 +1,5 @@
 {
+  "use_notification_center": 0,
   "smelly": {
     "die": "die",
     "error_log": "error_log\\(",

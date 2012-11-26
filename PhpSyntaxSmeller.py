@@ -27,5 +27,7 @@ class PhpSyntaxChecker(sublime_plugin.EventListener):
                 l = l + 1
 
             if len(errors):
-                # sublime.error_message(errors)
-                os.system('terminal-notifier -message "' + errors + '"')
+                if (sublime.load_settings("PhpSyntaxSmeller.sublime-settings").get("use_notification_center")):
+                    os.system('terminal-notifier -message "' + errors + '"')
+                else:
+                    sublime.error_message(errors)
