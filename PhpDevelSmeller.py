@@ -4,7 +4,7 @@ import os
 import re
 
 
-class PhpDevelChecker(sublime_plugin.EventListener):
+class PhpDevelSmeller(sublime_plugin.EventListener):
     def on_post_save(self, view):
         settings = sublime.load_settings("PhpDevelSmeller.sublime-settings")
         path = view.file_name()
