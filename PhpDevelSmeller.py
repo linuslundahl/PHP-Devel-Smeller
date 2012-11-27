@@ -5,14 +5,13 @@ import re
 
 
 class PhpDevelChecker(sublime_plugin.EventListener):
-    TARGET_SUFFIXES = [".php", ".module", ".inc"]
-
     def on_post_save(self, view):
-        settings = sublime.load_settings("PhpDevelSmeller.sublime-settings").get("smelly")
+        settings = sublime.load_settings("PhpDevelSmeller.sublime-settings")
         path = view.file_name()
         root, extension = os.path.splitext(path)
 
-        if extension in self.TARGET_SUFFIXES:
+        if extension in settings.get("extensions"):
+            smells = settings.get("smells")
             code = open(path, 'r').read()
 
             ignore = re.compile('\/\/\slegitimate')
@@ -20,14 +19,14 @@ class PhpDevelChecker(sublime_plugin.EventListener):
             l = 1
             errors = ''
             for line in code.split("\n"):
-                for smell in settings:
-                    ex = re.compile(settings[smell])
+                for smell in smells:
+                    ex = re.compile(smells[smell])
                     if ex.search(line) and not ignore.search(line):
                         errors += "%s smells bad at line %i\n" % (smell, l)
                 l = l + 1
 
             if len(errors):
-                if (sublime.load_settings("PhpDevelSmeller.sublime-settings").get("use_notification_center")):
+                if (settings.get("use_notification_center")):
                     os.system('terminal-notifier -message "' + errors + '"')
                 else:
                     sublime.error_message(errors)

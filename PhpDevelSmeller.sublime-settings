@@ -1,6 +1,7 @@
 {
   "use_notification_center": 0,
-  "smelly": {
+  "extensions": [".php", ".module", ".inc"],
+  "smells": {
     "die": "die",
     "error_log": "error_log\\(",
     "kpr": "kpr\\(",
