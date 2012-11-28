@@ -1,0 +1,3 @@
+[
+    { "keys": ["ctrl+shift+alt+delete"], "command": "php_devel_cleaner" }
+]
