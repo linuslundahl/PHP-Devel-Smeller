@@ -1,5 +1,7 @@
 # PHP Devel Smeller for Sublime Text 2
 
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=linuslundahl&url=https://github.com/linuslundahl/PHP-Devel-Smeller&title=PHP Devel Smeller for Sublime Text 2&language=&tags=github&category=software)
+
 Sublime Text 2 plugin that checks PHP files for "smelly" code such as `die;`, `var_dump();`, `print_r();` etc.
 
 This is NOT a syntax checker, use [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) for that.
