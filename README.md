@@ -1,4 +1,4 @@
-# PHP Devel Smeller for Sublime Text 2
+# PHP Devel Smeller for Sublime Text 2/3
 
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=linuslundahl&url=https://github.com/linuslundahl/PHP-Devel-Smeller&title=PHP Devel Smeller for Sublime Text 2&language=&tags=github&category=software)
 
