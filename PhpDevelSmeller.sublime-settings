@@ -2,7 +2,8 @@
   "use_notification_center": 0,
   "extensions": [".php", ".module", ".inc"],
   "smells": {
-    "die": "die",
+    "die(": "die\\(",
+    "die;": "die\\;",
     "error_log": "error_log\\(",
     "kpr": "kpr\\(",
     "print_r": "print_r\\(",
